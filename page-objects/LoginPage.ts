@@ -1,18 +1,17 @@
 import { Locator, Page } from "@playwright/test";
+import { AbstractPage } from "../page-objects/AbstractPage";
 
-export class LoginPage {
+
+export class LoginPage extends AbstractPage{
     
-    // Define selectors
-    private readonly _page: Page;
     private readonly _usernameInput: Locator;
     private readonly _passwordInput: Locator;
     private readonly _submitButton: Locator;
     private readonly _errorMessage: Locator;
 
 
-    // Init selectors using constructor
     constructor(page: Page) {
-        this._page = page;
+        super(page)
         this._usernameInput = page.locator("//input[@id='user_login']");
         this._passwordInput = page.locator("//input[@id='user_password']");
         this._submitButton = page.locator("input[type='submit']");

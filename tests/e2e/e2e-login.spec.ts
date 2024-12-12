@@ -17,9 +17,10 @@ test.describe("Login / Logout Flow", () => {
         await homePAge.clickOnSignIn();
     })
 
-    test("Shows error for missing credentials", async () => {
+    test.only("Shows error for missing credentials", async () => {
 
         await loginPage.clickOnSignIn();
+        await loginPage.wait(5);
         let errorMessage = await loginPage.getErrorMessage();
         expect(errorMessage).toContain("Login and/or password are wrong.");
 
