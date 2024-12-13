@@ -5,7 +5,7 @@ import { Page } from "@playwright/test";
 
 export class AbstractPage {
     protected readonly _page: Page;
-
+    
     constructor(page: Page) {
         this._page = page;
     }
