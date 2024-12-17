@@ -17,7 +17,7 @@ test.describe("Login / Logout Flow", () => {
         await homePAge.clickOnSignIn();
     })
 
-    test.only("Shows error for missing credentials", async () => {
+    test("Shows error for missing credentials", async () => {
 
         await loginPage.clickOnSignIn();
         await loginPage.wait(5);

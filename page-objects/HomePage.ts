@@ -7,13 +7,19 @@ export class HomePage {
     private readonly _signInButton: Locator;
     private readonly _searchBox: Locator;
     private readonly _feedbackform: Locator;
+    private readonly _searchResultsErrorMessage : Locator;
 
     constructor(page: Page) {
         this._page = page;
         this._signInButton = page.locator("#signin_button");
         this._searchBox = page.locator("#searchTerm");
         this._feedbackform = page.locator("#feedback");
+        this._searchResultsErrorMessage = page.locator(".top_offset");
     
+    }
+
+    public get searchResultsErrorMessage() {
+        return this._searchResultsErrorMessage;
     }
 
     async goToHomePage(){
