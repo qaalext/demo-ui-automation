@@ -2,6 +2,9 @@ import test, { devices, expect } from "@playwright/test";
 
 
 // emulating a device and perform testing
+// use webkit for IOS
+// use chrome for ANDROID
+
 test.use({
     ...devices['iPhone 11'],
   });
