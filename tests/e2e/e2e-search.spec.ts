@@ -1,4 +1,4 @@
-import {test, expect} from "@playwright/test";
+import {test, expect, devices} from "@playwright/test";
 import { HomePage } from "../../page-objects/HomePage";
 
 test.describe("Search", () => {
